@@ -1,0 +1,72 @@
+  .cabecalho{
+    min-width: 100%;
+    max-width: 1920px;
+    height: 150px;
+    box-shadow: 0 2px 7px orangered;
+    border-bottom: 1px solid white;
+    display: flex;
+    background: white;
+    .imagem{
+      display: flex;
+      width: 60%;
+      justify-content: flex-end;
+    }
+    .rotaitems{
+      width: min(100%);
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      gap: 10px;
+      >div{
+        cursor: pointer;
+      }
+      .routeItens{
+        font-weight: bold;
+        color: #73737e;
+        text-decoration: none;
+        width: 100px;
+        height: 40px;
+        gap: 10px;
+        &:hover{
+          color: orangered;
+        }
+      }
+    }
+    button{
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  @media only screen and(max-width: 414px){
+    .cabecalho{
+      display: flexbox;
+      min-width: 280px;
+      width: auto;
+      max-width: 414px;
+      height: 80px;
+
+      .rotaitems{
+        min-width: 280px;
+        width: auto;
+        max-width: 414px;
+
+        .routeItens{
+          width: 90px;
+          text-align: center;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+@media only screen and(max-width: 320px){
+  .cabecalho{
+    .rotaitems{
+      .routeItens{
+        font-size: 13px;
+      }
+    }
+  }
+}

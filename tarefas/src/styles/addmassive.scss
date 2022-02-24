@@ -1,0 +1,124 @@
+#addarea{
+  height: none;
+  width: auto;
+  max-width: 7680px;
+  display: grid;
+  grid-template-columns: minmax(680px, 1920px);
+  h2{
+    color: #73737e;
+    justify-self: center;
+    font-size: 30pt;
+    cursor: default;
+  }
+  .formAddMassive{
+    background: white;
+    display: grid;
+    row-gap: 20px;
+    justify-content: center;
+    border: 1px solid #919199;
+    box-shadow: 0 1px 7px orangered;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    justify-self: center;
+    padding-top: 50px;
+    margin-bottom: 20px;
+    >textarea{
+      resize: none;
+      outline-color: orangered;
+    }
+    >input{
+      height: 12px;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #73737e;
+      width: 300px;
+      color: black;
+      &:focus{
+        border-bottom: 1px solid orangered;
+      }
+      &:not(:placeholder-shown){
+        border-bottom: 1px solid orangered;
+      }
+    }
+    .statusItems{
+      width: 170px;
+      height: 20px;
+      justify-self: center;
+      text-align: center;
+      border: 1px solid orangered;
+      outline: none;
+      margin-bottom: 2px;
+      font-weight: bold;
+      background: none;
+      color: orangered;
+      >option{
+        color: black;
+      }
+    }
+    .addButton{
+      width: 100px;
+      margin-left: 30%;
+      border: 1px solid #73737e;
+      color: #73737e;
+      background-color: transparent;
+      cursor: pointer;
+      font-weight: 700;
+      border-radius: 50px;
+      margin-bottom: 5px;
+      &:hover{
+        filter: brightness(0.7);
+      }
+      &:active{
+        color: orangered;
+        border: 1px solid orangered;
+        filter: brightness(1);
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 414px){
+  body{
+    height: min(900px);
+    #root{
+      height: min(900px);
+      #addarea{
+        height: min(850px);
+        width: auto;
+        max-width: 414px;
+        grid-template-columns: minmax(280px, 414px);
+        row-gap: 5px;
+        grid-template-rows: 80px 100px 500px;
+        h2{
+          font-size: 20pt;
+          text-align: center;
+          align-self: center;
+          margin: 0px;
+        }
+        .formAddMassive{
+            width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 320px){
+  #addarea{
+    grid-template-rows: 80px 80px auto;
+    .cabecalho{
+      .rotaitems{
+        .routeItens{
+          font-size: 13px;
+        }
+      }
+    }
+    .formAddMassive{
+      >input{
+        width: 250px;
+      }
+    }
+  }
+}

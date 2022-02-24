@@ -1,0 +1,170 @@
+#main{
+  min-width: 680px;
+  height: 657px;
+  width: auto;
+  max-width: 7680px;
+  display: grid;
+  grid-template-columns: minmax(680px, 7680px);
+  #view-area{
+    align-self: center;
+    margin-top: 50px;
+    width: 100%;
+    min-height: 450px;
+    height: 450px;
+    max-height: max-content;
+    display: grid;
+    gap: 50px;
+    grid-template-rows: 300px 300px;
+    justify-content: center;    
+        #list-area{
+          width: 100%;
+          color: #73737e;
+          font-weight: 600;
+          display: grid;
+          height: max-content;
+          grid-template-columns: 410px 410px 410px;
+          grid-auto-rows: 300px;
+          font-size: 10pt;
+          column-gap: 10px;
+          row-gap: 5px;
+            .dataItems{
+              cursor: default;
+              justify-self: center;
+              border-radius: 5px;
+              margin: 5px;
+              width: 380px;
+              border: 1px solid orangered;
+              background-color: white;
+              display: grid;
+              height: 250px;
+              grid-template-rows: 35px 105px 70px 35px;
+              box-shadow: 0 1px 8px orangered;
+                span{
+		              color: black;
+                  justify-self: center;
+		              margin-top: 3px;
+		              word-break: break-all;
+                  font-size: 15pt;
+                  font-weight: bold;
+                  display: flex;
+                  width: 380px;
+                  justify-content: center;
+                }
+                ul{
+                  li{
+                    word-break: break-all;
+                    margin-bottom: 5px;
+                  }
+                  li + li{
+                    margin-bottom: 5px;
+                  }
+                }
+                .status{
+                  width: 180px;
+                  height: 20px;
+                  justify-self: center;
+                  align-self: center;
+                  outline: none;
+                  margin-bottom: 2px;
+                  border: 1px solid orangered;
+                  font-weight: bold;
+                  color: orangered;
+                }
+                .areatexto{
+                  outline: none;
+                  font-weight: bolder;
+                  text-align: center;
+                  border: none;
+                  background-color: transparent;
+                  resize: none;
+                  padding: 5px;
+                  width: 360px;
+                  height: 60px;
+                  margin: 0px;
+                  word-break: break-all;
+                }
+            }
+          }
+        }
+}
+@media only screen and(min-width: 1920px) {
+  #main{
+    height: min(937px);
+
+    #view-area{
+      height: min(736px);
+
+      #list-area{
+
+        width: min(1800px);
+        grid-template-columns: 630px 580px 630px;
+
+        .dataItems{
+          font-size: 15pt;
+          height: 290px;
+          width: 500px;
+          grid-template-rows: 35px 150px 70px 35px;
+
+          span{
+            font-size: 20pt;
+          }
+
+          .areatexto{
+            justify-self: center;
+            font-size: 20px;
+          }
+  
+        }
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 414px){
+  body{
+    height: auto;
+    #root{
+      height: auto;
+      #main{
+        min-width: 320px;
+        width: auto;
+        max-width: 414px;
+        height: max-content;
+        grid-template-columns: minmax(280px, 414px);
+        grid-template-rows: 100px;
+        #view-area{
+          margin-top: 0px;
+          width: 100%;
+          grid-template-rows: 100%;
+          height: auto;
+          #list-area{
+            width: 100%;
+            grid-template-columns: none;
+
+            .dataItems{
+              align-self: center;
+              width: 90%;
+              grid-template-columns: 100%;
+              span{
+                width: 280px;
+                font-size: 13pt;
+                justify-self: auto;
+              }
+
+              ul{
+                max-width: 100%;
+                font-size: 10px;
+                margin: 2px;
+                padding-left: 20px;
+              }
+              .areatexto{
+                width: 200px;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

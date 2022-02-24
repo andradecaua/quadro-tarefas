@@ -1,0 +1,79 @@
+.login{
+  min-width: 680px;
+  width: auto;
+  max-width: 7680px;
+  height: 657px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  div{
+    background-color: white;
+    width: 300px;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 100%;
+    row-gap: 5px;
+    height: 350px;
+    box-shadow: 0 1px 7px orangered;
+    border-radius: 8px;
+    border: 1px solid orangered;
+    .areabutton{
+      background: none;
+      border: none;
+      box-shadow: none;
+      height: max-content;
+      display: grid;
+      grid-template-rows: 40px 40px;
+      align-self: center;
+      h2{
+        grid-row-start: 2;
+        font-size: 15pt;
+        margin: 0px;
+        grid-row-end: 3;
+        cursor: default;
+        align-self: flex-end;
+        color: orangered;
+      }
+      .loginButton{
+        align-self: flex-end;
+        justify-self: center;
+        width: 180px;
+        height: 35px;
+        font-weight: bold;
+        background-color: #EA4335;
+        color: white;
+        border: 1px solid #EA4335;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &:hover{
+          filter: brightness(0.9);
+        }
+      }
+  }
+  }
+}
+@media only screen and(min-width: 1920px){
+  .login{
+    height: min(937px);
+  }
+}
+
+@media only screen and(max-width: 414px){
+  .login{
+    min-width: 280px;
+    width: auto;
+    max-width: 414px;
+
+    .imagem{
+      width: 0px;
+    }
+
+    .rotaitems{
+      max-width: 414px;
+    }
+  }
+}

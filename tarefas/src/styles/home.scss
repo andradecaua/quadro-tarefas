@@ -1,0 +1,82 @@
+#home{
+    min-width: 680px;
+    width: auto;
+    max-width: 7680px;
+    height: 657px;
+    display: grid;
+    grid-template-columns: minmax(680px, 7680px);
+    #titulo{
+      align-self: flex-end;
+      justify-self: center;
+      cursor: default;
+      color: #73737e;
+      font-size: 80px;
+      margin: 0px;
+      height: 150px;
+      font-weight: bold;
+    }
+    #routeDiv{
+      justify-self: center;
+      height: max-content;
+      display: flex;
+      gap: 40px;
+      font-size: 30px;
+      #divRoute{
+        width: 270px;
+      }
+      .routeItens{
+        height: 40px;
+        text-decoration: none;
+        color: #73737e;
+        cursor: pointer;
+        font-weight: bold;
+        &:hover{
+          color: orangered;
+        }
+      }
+    }
+  }
+
+  @media only screen and(min-width: 1920px){
+    #home{
+      height: min(937px);
+    }
+  }
+
+  @media only screen and(max-width: 414px){
+    #home{
+      min-width: 280px;
+      width: auto;
+      max-width: 414px;
+      grid-template-columns: minmax(280px, 414px);
+
+      #titulo{
+        font-size: 40px;
+        @media screen and(max-width: 280px){
+          font-size: 30px;
+        }
+      }
+      #routeDiv{
+        display: grid;
+        gap: 10px;
+        width: 320px;
+          @media screen and(max-width: 280px) {
+            font-size: 25px;
+            width: 280px;
+            justify-content: center;
+            #divRoute{
+              text-align: center;
+            }
+            a{
+              justify-self: center;
+            }
+          }
+            #divRoute{
+              justify-self: center;
+            }
+            a{
+              justify-self: center;
+            }
+      }
+    }
+  }
